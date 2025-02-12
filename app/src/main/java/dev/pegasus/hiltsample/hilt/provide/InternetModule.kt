@@ -1,4 +1,4 @@
-package dev.pegasus.hiltsample.provide
+package dev.pegasus.hiltsample.hilt.provide
 
 import android.content.Context
 import dagger.Module

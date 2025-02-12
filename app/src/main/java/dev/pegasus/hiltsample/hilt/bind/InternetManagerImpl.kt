@@ -1,4 +1,4 @@
-package dev.pegasus.hiltsample.bind
+package dev.pegasus.hiltsample.hilt.bind
 
 import android.content.Context
 import android.net.ConnectivityManager

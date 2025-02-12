@@ -1,21 +1,20 @@
-package dev.pegasus.hiltsample.constructorInject
+package dev.pegasus.hiltsample.hilt.provide
 
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.util.Log
-import dagger.hilt.android.qualifiers.ApplicationContext
-import javax.inject.Inject
 
 /**
- * @Author: SOHAIB AHMED
- * @Date: 12/02/2025
- * @Accounts
- *      -> https://github.com/epegasus
- *      -> https://www.linkedin.com/in/epegasus
+ * Created by: Sohaib Ahmed
+ * Date: 2/11/2025
+ *
+ * Links:
+ * - LinkedIn: https://linkedin.com/in/epegasus
+ * - GitHub: https://github.com/epegasus
  */
 
-class InternetManager @Inject constructor(@ApplicationContext context: Context) {
+class InternetManager(context: Context) {
 
     private val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
 

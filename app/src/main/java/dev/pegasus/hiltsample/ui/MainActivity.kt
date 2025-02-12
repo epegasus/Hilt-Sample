@@ -1,4 +1,4 @@
-package dev.pegasus.hiltsample
+package dev.pegasus.hiltsample.ui
 
 import android.os.Bundle
 import android.util.Log
@@ -7,17 +7,20 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import dagger.hilt.android.AndroidEntryPoint
+import dev.pegasus.hiltsample.R
 import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     @Inject
-    lateinit var internetManagerInject: dev.pegasus.hiltsample.constructorInject.InternetManager
-    /*@Inject
-    lateinit var internetManagerBind: dev.pegasus.hiltsample.bind.InternetManager
+    lateinit var internetManagerInject: dev.pegasus.hiltsample.hilt.constructorInject.InternetManager
+
     @Inject
-    lateinit var internetManagerProvide: dev.pegasus.hiltsample.provide.InternetManager*/
+    lateinit var internetManagerBind: dev.pegasus.hiltsample.hilt.bind.InternetManager
+
+    @Inject
+    lateinit var internetManagerProvide: dev.pegasus.hiltsample.hilt.provide.InternetManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,9 +40,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun executeLogs() {
-       /* Log.d(TAG, "executeLogs: Constructor Inject: ${internetManagerInject.isInternetConnected()}")
+        Log.d(TAG, "executeLogs: Constructor Inject: ${internetManagerInject.isInternetConnected()}")
         Log.d(TAG, "executeLogs: Binds: ${internetManagerBind.isInternetConnected()}")
-        Log.d(TAG, "executeLogs: Provides: ${internetManagerProvide.isInternetConnected()}")*/
+        Log.d(TAG, "executeLogs: Provides: ${internetManagerProvide.isInternetConnected()}")
     }
 
     companion object {

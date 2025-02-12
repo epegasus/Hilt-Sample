@@ -1,4 +1,4 @@
-package dev.pegasus.hiltsample.bind
+package dev.pegasus.hiltsample.hilt.bind
 
 /**
  * @Author: SOHAIB AHMED
